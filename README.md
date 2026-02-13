@@ -4,7 +4,7 @@
 ## End-To-End Workflow 
 ![](https://github.com/AbhinavDN/ML_Sales_prediction/blob/main/End-to-end%20ML%20project%20workflow(Img).jpg)
 
-## 1️⃣ Project Overview
+## 1️ Project Overview
 
 This project focuses on predicting product sales using a Machine Learning Linear Regression model. The dataset contains advertising budgets spent on different platforms such as TV, Radio, and Newspaper, and the corresponding Sales generated.
 
@@ -20,7 +20,7 @@ Model building using Linear Regression
 
 Model evaluation and prediction
 
-## 2️⃣ Objective of the Project
+## 2️ Objective of the Project
 
 The main objectives of this project are:
 
@@ -34,10 +34,10 @@ To understand which advertising medium contributes most to sales.
 
 To provide a simple and effective sales forecasting solution.
 
-## 3️⃣ Project Schema (Working Process)
+## 3️ Project Schema (Working Process)
 ![](https://github.com/AbhinavDN/ML_Sales_prediction/blob/main/MLalgo.ipynb)
 
-###🔹 Step 1: Data Collection
+### Step 1: Data Collection
 
 Dataset: Advertising Budget and Sales.csv
 
@@ -53,7 +53,7 @@ Target Variable:
 
 Sales
 
-###🔹 Step 2: Data Preprocessing
+### Step 2: Data Preprocessing
 
 Importing required libraries (NumPy, Pandas, Matplotlib, Scikit-learn)
 
@@ -71,7 +71,7 @@ Independent variables (X)
 
 Dependent variable (Y)
 
-###🔹 Step 3: Exploratory Data Analysis (EDA)
+### Step 3: Exploratory Data Analysis (EDA)
 
 Checking correlation between advertising platforms and sales
 
@@ -79,7 +79,7 @@ Visualizing relationships using scatter plots
 
 Understanding trends in data
 
-###🔹 Step 4: Model Building
+### Step 4: Model Building
 
 Splitting data into:
 
@@ -91,7 +91,7 @@ Applying Linear Regression algorithm
 
 Training the model using training data
 
-###🔹 Step 5: Model Evaluation
+### Step 5: Model Evaluation
 
 Predicting sales on test data
 
@@ -103,7 +103,7 @@ Mean Squared Error (MSE)
 
 Comparing actual vs predicted sales
 
-##4️⃣ Findings
+## 4️ Findings
 
 Based on model training and analysis:
 
@@ -120,7 +120,7 @@ The R² score indicates that a large percentage of sales variation is explained 
 Key Insight:
 👉 Increasing budget on TV and Radio advertisements can significantly improve sales performance.
 
-##5️⃣ Conclusion
+## 5️ Conclusion
 
 This project successfully demonstrates how Machine Learning can be used for sales forecasting.
 
