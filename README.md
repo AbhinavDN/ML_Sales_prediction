@@ -35,7 +35,91 @@ To understand which advertising medium contributes most to sales.
 To provide a simple and effective sales forecasting solution.
 
 ## 3️ Project Schema (Working Process)
-![](https://github.com/AbhinavDN/ML_Sales_prediction/blob/main/MLalgo.ipynb)
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load Dataset
+df = pd.read_csv("/content/Advertising Budget and Sales.csv")
+df.head()
+
+# Drop unnecessary column
+df.drop(columns=["Unnamed: 0"], inplace=True)
+
+df
+
+# Define Features (X) and Target (Y)
+X = df.drop(columns=["Sales"])
+X.head()
+
+Y = df["Sales"]
+Y.head()
+
+# Train-Test Split
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, ytest = train_test_split(
+    X, Y, test_size=0.2, random_state=0
+)
+
+x_train.shape
+
+# Linear Regression Model
+from sklearn.linear_model import LinearRegression
+linear_reg = LinearRegression()
+
+# Train Model
+linear_reg.fit(x_train, y_train)
+
+# Model Parameters
+linear_reg.intercept_
+linear_reg.coef_
+
+# Regression Equation
+# m1 = 0.04458402
+# m2 = 0.19649703
+# m3 = -0.00278146
+# Sales = (m1 * TV) + (m2 * Radio) + (m3 * Newspaper) + c
+
+# Prediction on Test Data
+y_pred = linear_reg.predict(x_test)
+
+# Model Evaluation
+from sklearn.metrics import mean_squared_error
+mse = mean_squared_error(ytest, y_pred)
+mse
+
+# Root Mean Squared Error (RMSE)
+np.sqrt(mse)
+
+# Sample Prediction
+linear_reg.predict([[230.1, 37.8, 69.2]])
+
+# Install Gradio (for UI)
+%%capture
+pip! install gradio
+
+# Gradio Interface
+import gradio as gr
+
+def sales_predictor(TV, Radio, Newspaper):
+    prediction = linear_reg.predict([[TV, Radio, Newspaper]])
+    return float(prediction[0])
+
+demo = gr.Interface(
+    fn=sales_predictor,
+    inputs=["number", "number", "number"],
+    outputs="number"
+)
+
+demo.launch()
+
+# Ignore warnings
+import warnings
+warnings.filterwarnings("ignore")
+
+```
 
 ### Step 1: Data Collection
 
