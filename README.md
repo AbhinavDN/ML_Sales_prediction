@@ -35,7 +35,7 @@ To understand which advertising medium contributes most to sales.
 To provide a simple and effective sales forecasting solution.
 
 ## 3️⃣ Project Schema (Working Process)
-https://github.com/AbhinavDN/ML_Sales_prediction/blob/main/MLalgo.ipynb
+![](https://github.com/AbhinavDN/ML_Sales_prediction/blob/main/MLalgo.ipynb)
 
 ###🔹 Step 1: Data Collection
 
