@@ -123,7 +123,8 @@ warnings.filterwarnings("ignore")
 
 ### Step 1: Data Collection
 
-Dataset: Advertising Budget and Sales.csv
+[View the raw data file link ](https://www.kaggle.com/datasets/yasserh/advertising-sales-dataset)
+
 
 Features:
 
